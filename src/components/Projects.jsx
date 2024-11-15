@@ -101,7 +101,7 @@ const Projects = () => {
             {!loading ? <div
               // data-aos='fade-right' data-aos-duration="1000"
               className="grid lg:grid-cols-4 grid-cols-2 w-full gap-10 ">
-              {records.map((item, i) => {
+              {records && records.map((item, i) => {
                 const isEven = i % 2 === 0
                 return (
                   <div data-aos={`${isEven ? 'fade-down.' : 'fade-up'}`}
