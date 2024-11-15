@@ -70,7 +70,7 @@ const Navbar = () => {
                 <div data-aos="fade-right"
                     data-aos-duration="2000"
                     className=" ">
-                    <div className="text-3xl">Litezy</div>
+                    <div className="text-3xl font-bold text-zinc-400 italic">Litezy</div>
 
                 </div>
                 <div className="lg:flex items-center gap-5 hidden">
@@ -86,7 +86,7 @@ const Navbar = () => {
                     data-aos-duration="2000"
                     className={` ${modal && '-ml-60'}`}
                 >
-                    <img src={hero} className='rounded-full w-16 h-16' alt="hero image" />
+                    <img src={hero} className='rounded-full w-14 h-14' alt="hero image" />
                 </div>
                 <div className="">
                     {!modal && <div data-aos="fade-left" data-aos-duration="2000" onClick={() => setModal(true)} className=""><HiMiniBars3BottomRight className={`text-5xl cursor-pointer`} /></div>}

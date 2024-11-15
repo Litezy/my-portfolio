@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaArrowLeftLong } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 import { webprojects } from '../utils/utils'
 import { localName } from './Repos'
 import { IoLogoGithub, IoMdStar } from 'react-icons/io'
 import Loader from './Loader'
+
 
 const Projects = () => {
   const storedUser = JSON.parse(localStorage.getItem(localName))
@@ -25,16 +26,30 @@ const Projects = () => {
 
   const nextPage = () => {
     if (currentPage < npage) {
-      setCurrentPage(currentPage + 1)
+      return setCurrentPage((prevPage) => prevPage + 1);
     }
-  }
+  };
+
+
+  useEffect(() => {
+    setLoading(true); // Start loader when `currentPage` changes
+    // Simulate data fetching
+    const timer = setTimeout(() => {
+      setLoading(false); // Stop loader after fetching
+    }, 500);
+
+    return () => clearTimeout(timer); // Clean up timer
+  }, [currentPage]);
+
+
+
   return (
     <div className="w-full mt-24">
       <div className='w-full   bg-alt'>
         <div className="w-full py-3 flex items-start justify-center">
           <div className="w-10/12 mx-auto flex flex-col gap-5 h-full">
             <Link to={`/`}>
-              <FaArrowLeftLong className='text-2xl cursor-pointer' />
+              <FaArrowLeftLong className='text-3xl cursor-pointer' />
             </Link>
             <div className="">
               <div className="text-4xl font-bold text-zinc-300">Projects</div>
@@ -70,74 +85,92 @@ const Projects = () => {
             )
           })}
         </div>
-      
+
       </div>
       <div className="mt-10 w-full ">
-          <div className='w-full py-20 my-10 bg-sec'>
-            <div className="pb-10 w-10/12 mx-auto relative">
-              <div data-aos='fade-right' data-aos-duration="1000"
-                className="text-xl text-zinc-400 mb-4">All Repos</div>
-              {loading && <div className="w-full absolute top-1/2 right-1/2 -translate-x-1/2 justify-center flex items-center h-full">
-                <Loader />
-              </div>}
+        <div className='w-full py-20 my-10 bg-sec relative '>
 
-              <div
-                data-aos='fade-right' data-aos-duration="1000"
-                className="grid lg:grid-cols-4 grid-cols-2 w-full gap-10 ">
-                {records.map((item, i) => {
-                  const isEven = i % 2 === 0
-                  return (
-                    <div data-aos={`${isEven ? 'fade-down.' : 'fade-up'}`}
-                      data-aos-duration='2000'
-                      key={i} className="bg-alt flex flex-col justify-between h-40 w-full px-3 py-2 rounded-md">
-                      <div className="flex items-center justify-between">
-                        <div className="capitalize">{item.name}</div>
-                        <Link target='blank' className='text-primary underline' to={item?.html_url}>view</Link>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2">
-                          <div className="flex items-center gap-1">
-                            {Array(3).fill().map((item, i) => (
-                              <div key={i} className="text-primary"><IoMdStar /></div>
-                            ))}
-                          </div>
-                          <div className="text-sm">{item.stargazers_count} <span>stars</span></div>
-                          <div key={i} className="text-primary"><IoLogoGithub /></div>
-                          <div className="text-sm">{item.forks_count} <span>forks</span></div>
+          <div className="pb-10 w-10/12 mx-auto relative">
+            <div data-aos='fade-right' data-aos-duration="1000"
+              className="text-xl text-zinc-400 ">All Repos</div>
+            <div data-aos='fade-left' data-aos-duration="1000" className="text-sm mb-4 text-zinc-400">Including Stackup Codealongs / Quests</div>
+            {loading && <div className=" absolute top-1/2 z-40 left-1/2 -translate-x-1/2   h-full">
+              <Loader />
+            </div>}
+
+            {!loading ? <div
+              // data-aos='fade-right' data-aos-duration="1000"
+              className="grid lg:grid-cols-4 grid-cols-2 w-full gap-10 ">
+              {records.map((item, i) => {
+                const isEven = i % 2 === 0
+                return (
+                  <div data-aos={`${isEven ? 'fade-down.' : 'fade-up'}`}
+                    data-aos-duration='2000'
+                    key={i} className="bg-alt flex flex-col justify-between h-40 w-full px-3 py-2 rounded-md">
+                    <div className="flex items-center justify-between">
+                      <div className="capitalize">{item.name}</div>
+                      <Link target='blank' className='text-primary underline' to={item?.html_url}>view</Link>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-1">
+                          {Array(3).fill().map((item, i) => (
+                            <div key={i} className="text-primary"><IoMdStar /></div>
+                          ))}
                         </div>
+                        <div className="text-sm">{item.stargazers_count} <span>stars</span></div>
+                        <div key={i} className="text-primary"><IoLogoGithub /></div>
+                        <div className="text-sm">{item.forks_count} <span>forks</span></div>
                       </div>
+                    </div>
+                  </div>
+                )
+              })}
+            </div> :
+              <div className="h-96 w-full grid animate-pulse z-10 lg:grid-cols-4 grid-cols-2   gap-10  rounded-md">
+                {Array(8).fill().map((_, i) => {
+                  return (
+                    <div
+                      key={i} className="bg-alt flex flex-col justify-between h-40 w-full px-3 py-2 rounded-md">
                     </div>
                   )
                 })}
               </div>
-            </div>
-            {records.length > 0 && (
-          <div className="w-10/12 mx-auto bg-alt mb-5 p-5">
-            <div className="w-full flex flex-col items-center">
-              <span className="text-sm text-gray-200">
-                Showing <span className="font-semibold text-primary ">{(records.length > 0 && firstIndex === 0) ? '1' : firstIndex + 1}</span> to
-                <span className="font-semibold text-primary"> {lastIndex > storedUser?.length ? storedUser?.length : lastIndex}</span> of
-                <span className="font-semibold text-primary "> {storedUser?.length} </span>
-                Repos
-              </span>
+            }
+
+
+
+          </div>
+
+
+          {records.length > 0 && (
+            <div className="w-10/12 mx-auto  mb-5 p-5">
+
               <div className="flex items-center  justify-between w-full mt-2">
                 <button onClick={prevPage} className="flex items-center justify-center px-4 h-10 text-base font-medium text-white bg-primary rounded-md">
                   Prev
                 </button>
+                <div className="w-full flex flex-col items-center">
+                  <span className="text-sm text-gray-200">
+                    Showing <span className="font-semibold text-primary ">{(records.length > 0 && firstIndex === 0) ? '1' : firstIndex + 1}</span> to
+                    <span className="font-semibold text-primary"> {lastIndex > storedUser?.length ? storedUser?.length : lastIndex}</span> of
+                    <span className="font-semibold text-primary "> {storedUser?.length} </span>
+                    Repos
+                  </span>
+                </div>
                 <button onClick={nextPage} className="flex items-center justify-center px-4 h-10 text-base font-medium text-white bg-primary rounded-md">
                   Next
                 </button>
               </div>
             </div>
-          </div>
-        )}
-          </div>
-
-          <div className="">
-          
-          </div>
+          )}
         </div>
-    </div>
+
+        <div className="">
+
+        </div>
+      </div>
+    </div >
   )
 }
 

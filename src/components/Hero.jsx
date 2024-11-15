@@ -36,12 +36,12 @@ const Hero = () => {
                 <div data-aos="fade-up"
                     data-aos-duration="2000"
                     className="flex items-start gap-20 mt-5 w-full">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-start gap-2">
                         <div className="text-6xl font-bold">2</div>
                         <div className="text-xs text-zinc-400">years of <br /> experience</div>
                     </div>
                     <div className="flex items-start gap-2">
-                        <div className="text-6xl font-bold">65</div>
+                        <div className="text-6xl font-bold">30</div>
                         <div className="text-xs text-zinc-400">projects/ <br />contributions</div>
                     </div>
                 </div>

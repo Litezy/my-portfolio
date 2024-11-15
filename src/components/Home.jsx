@@ -8,6 +8,7 @@ import Quotes from './Quotes'
 
 
 const Home = () => {
+    
     return (
         <div className=' ' >
             <div className=" w-10/12 mx-auto px-2 pt-40   ">

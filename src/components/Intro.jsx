@@ -16,7 +16,7 @@ const Intro = () => {
         },
         {
             name: 'Deployed',
-            proj: 10,
+            proj: 4,
             time: 'Completed'
         }
     ]

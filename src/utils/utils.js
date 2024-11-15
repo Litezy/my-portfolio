@@ -148,7 +148,7 @@ export const webprojects = [
         name:"E-commerce App",
         type:'Frontend E-commerce UI',
         techstack:'React/ReactRedux , TailwindCss  ',  
-        link:'https://github.com/Litezy/hng-landingpage',
+        link:'https://sample-ecoms.netlify.app/',
         img:ecom,
     },
     {
