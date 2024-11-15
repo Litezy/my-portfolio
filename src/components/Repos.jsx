@@ -30,7 +30,7 @@ const Repos = () => {
     }, [])
 
     const storedUser = JSON.parse(localStorage.getItem(localName))
-    const featuredRepos = storedUser.slice(0,8)
+    const featuredRepos = storedUser
     // console.log(data)
     return (
         <div className='w-full py-20 my-10 bg-sec'>
