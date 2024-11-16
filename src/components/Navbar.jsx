@@ -66,30 +66,23 @@ const Navbar = () => {
     return (
         <div
             className='w-full max-h-32 py-3  right-1/2  translate-x-1/2  top-0 z-50 bg-sec border-zinc-500 fixed'>
-            <div className="w-11/12 mx-auto  h-full text-white/90 flex items-center justify-between">
+            <div className="w-11/12 mx-auto   h-full text-white/90 flex items-center justify-between">
                 <div data-aos="fade-right"
                     data-aos-duration="2000"
-                    className=" ">
-                    <div className="text-3xl font-bold text-zinc-400 italic">Litezy</div>
+                    className=" flex w-1/2 items-center justify-between ">
+                    <div className="text-xl lg:text-3xl font-bold text-zinc-400 italic">Litezy</div>
+                    <div className="lg:flex items-center gap-5 hidden">
+                        {navs.map((item, i) => {
+                            return (
+                                <Link key={i} to={item.url} className={`${location.pathname === item.url && 'bg-primary'} flex items-center text-[12px] lg:text-sm  py-1.5 px-3 cursor-pointer hover:bg-primary`}>{item.name}</Link>
+                            )
+                        })}
+                    </div>
+                </div>
 
-                </div>
-                <div className="lg:flex items-center gap-5 hidden">
-                    {navs.map((item, i) => {
-                        return (
-                            <Link key={i} to={item.url} className={`${location.pathname === item.url && 'bg-primary'} flex items-center text-[12px] lg:text-sm  py-1.5 px-3 cursor-pointer hover:bg-primary`}>{item.name}</Link>
-                        )
-                    })}
-                </div>
 
-                <div
-                    data-aos="fade-left"
-                    data-aos-duration="2000"
-                    className={` ${modal && '-ml-60'}`}
-                >
-                    <img src={hero} className='rounded-full w-14 h-14' alt="hero image" />
-                </div>
                 <div className="">
-                    {!modal && <div data-aos="fade-left" data-aos-duration="2000" onClick={() => setModal(true)} className=""><HiMiniBars3BottomRight className={`text-5xl cursor-pointer`} /></div>}
+                    {!modal && <div data-aos="fade-left" data-aos-duration="2000" onClick={() => setModal(true)} className=""><HiMiniBars3BottomRight className={`lg:text-4xl text-2xl cursor-pointer`} /></div>}
                     {modal &&
                         <div
                             ref={modaldiv}

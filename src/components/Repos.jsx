@@ -43,7 +43,7 @@ const Repos = () => {
 
                 <div
                     data-aos='fade-right' data-aos-duration="1000"
-                    className="grid lg:grid-cols-4 grid-cols-2 w-full gap-10 ">
+                    className="grid lg:grid-cols-4 grid-cols-1 w-full gap-10 ">
                     {storedUser && storedUser.slice(0, 8).map((item, i) => {
                         const isEven = i % 2 === 0
                         return (

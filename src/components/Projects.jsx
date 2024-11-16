@@ -44,7 +44,7 @@ const Projects = () => {
 
 
   return (
-    <div className="w-full mt-24">
+    <div className="w-full mt-14">
       <div className='w-full   bg-alt'>
         <div className="w-full py-3 flex items-start justify-center">
           <div className="w-10/12 mx-auto flex flex-col gap-5 h-full">

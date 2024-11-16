@@ -11,7 +11,7 @@ const Home = () => {
     
     return (
         <div className=' ' >
-            <div className=" w-10/12 mx-auto px-2 pt-40   ">
+            <div className=" w-10/12 mx-auto px-2 pt-24   ">
                 <Hero />
             </div>
             <div className="mt-20 b-black/40">
@@ -19,11 +19,11 @@ const Home = () => {
             </div>
             <div className="mt-10 w-full flex-col flex items-center justify-center py-10">
                 <div className="flex items-center justify-around h-10 w-11/12 lg:w-[35%] mx-auto">
-                    <div data-aos='fade-up' className="w-32 h-1 bg-primary"></div>
+                    <div data-aos='fade-up' className="lg:w-32 w-20 h-1 bg-primary"></div>
                     <div className="">Latest Works</div>
-                    <div data-aos='fade-up' className="w-32 h-1 bg-primary"></div>
+                    <div data-aos='fade-up' className="w-20 lg:w-32 h-1 bg-primary"></div>
                 </div>
-                <Link to={`/projects`} className="text-primary underline">All Projects</Link>
+                <Link to={`/projects`} className="text-primary underline">Projects</Link>
             </div>
             <div className="pb-10 w-10/12 mx-auto">
                 <div className="text-xl text-zinc-400 mb-4">Featured Projects</div>

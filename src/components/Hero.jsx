@@ -15,7 +15,7 @@ const Hero = () => {
     ]
     return (
         <div className="flex items-center w-full bg-[#2d2e32]] flex-col lg:flex-row gap-20">
-            <div className="flex items-start flex-col gap-6  w-full lg:w-1/2">
+            <div className="flex items-start flex-col gap-6   w-full lg:w-1/2">
                 <div data-aos="fade-right"
                     data-aos-duration="1000"
                     data-aos-easing="ease-in-sine"
