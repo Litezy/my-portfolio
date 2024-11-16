@@ -4,28 +4,29 @@ import { FaFacebook } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { CiMail } from "react-icons/ci";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const apps = [
     {
       img:<BsTwitterX/>,
-      link:''
+      link:'https://x.com/_litezy'
     },
     {
       img:<FaFacebook/>,
-      link:''
+      link:'https://web.facebook.com/Iammrlite/'
     },
     {
       img:<FaGithub/>,
-      link:''
+      link:'https://github.com/Litezy'
     },
     {
       img:<FaLinkedin/>,
-      link:''
+      link:'https://www.linkedin.com/in/bethel-nnadi-4a4844194/ '
     },
     {
       img:<CiMail/>,
-      link:''
+      link:"mailto:liteb237@gmail.com?subject=Hello&body=I%20would%20like%20to%20connect%20with%20you."
     },
   ]
 
@@ -41,7 +42,7 @@ const Footer = () => {
         </div>
         <div  className="flex items-center gap-4">
           {apps.map((app,i) => (
-            <div  className="text-base cursor-pointer" key={i}>{app.img}</div>
+            <Link target='blank' to={app.link} className="text-base cursor-pointer" key={i}>{app.img}</Link>
           ))}
         </div>
       </div>

@@ -100,10 +100,11 @@ const Navbar = () => {
                                         <div className="">Github</div>
                                         <FaGithub />
                                     </Link>
-                                    <div className=" cursor-pointer flex px-5 items-center gap-3">
+                                     <a href="mailto:liteb237@gmail.com?subject=Hello&body=I%20would%20like%20to%20connect%20with%20you."
+                                    className=" cursor-pointer flex px-5 items-center gap-3">
                                         <div className="">Email</div>
                                         <CiMail className='text-white text-xl' />
-                                    </div>
+                                    </a>
                                 </div>
 
                                 <div className="flex flex-col gap-5">
