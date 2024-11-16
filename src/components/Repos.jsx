@@ -47,7 +47,7 @@ const Repos = () => {
                     {storedUser && storedUser.slice(0, 8).map((item, i) => {
                         const isEven = i % 2 === 0
                         return (
-                            <div data-aos={`${isEven ? 'fade-down.' : 'fade-up'}`}
+                            <div data-aos={`${isEven ? 'fade-left.' : 'fade-right'}`}
                                 data-aos-duration='2000'
                                 key={i} className="bg-alt flex flex-col justify-between h-40 w-full px-3 py-2 rounded-md">
                                 <div className="flex items-center justify-between">

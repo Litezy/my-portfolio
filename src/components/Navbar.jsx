@@ -65,7 +65,7 @@ const Navbar = () => {
     // }, [])
     return (
         <div
-            className='w-full max-h-32 py-3  right-1/2  translate-x-1/2  top-0 z-50 bg-sec border-zinc-500 fixed'>
+            className='w-full max-h-52 py-3  right-1/2  translate-x-1/2  top-0 z-50 bg-sec border-zinc-500 fixed'>
             <div className="w-11/12 mx-auto   h-full text-white/90 flex items-center justify-between">
                 <div data-aos="fade-right"
                     data-aos-duration="2000"
@@ -88,18 +88,18 @@ const Navbar = () => {
                             ref={modaldiv}
                             data-aos="fade-left"
                             data-aos-duration="2000"
-                            className="absolute bg-sec lg:w-[25dvw] w-[60%] right-0 top-0 h-[100dvh] rounded-s-md">
-                            <div className="flex flex-col gap-20 items-center justify-start py-5  h-full">
-                                <div className="flex flex-col gap-2">
+                            className="absolute bg-sec w-full right-0 top-0 h-[50dvh] rounded-s-md">
+                            <div className="flex  gap-20 items-start justify-center py-5  h-full">
+                                <div className="flex flex-col gap-5">
                                     <div className="text-base underline text-primary">Social Handles</div>
-                                    <div className=" cursor-pointer flex px-5 items-center  gap-3">
+                                    <Link target='blank' to={`https://x.com/_litezy`} className=" cursor-pointer flex px-5 items-center  gap-3">
                                         <div className="">Twitter</div>
                                         <BsTwitterX />
-                                    </div>
-                                    <div className="flex cursor-pointer px-5 items-center gap-3">
+                                    </Link>
+                                    <Link target='blank' to={`https://github.com/Litezy`} className="flex cursor-pointer px-5 items-center gap-3">
                                         <div className="">Github</div>
                                         <FaGithub />
-                                    </div>
+                                    </Link>
                                     <div className=" cursor-pointer flex px-5 items-center gap-3">
                                         <div className="">Email</div>
                                         <CiMail className='text-white text-xl' />
@@ -116,6 +116,13 @@ const Navbar = () => {
                                         })}
                                     </div>
                                 </div>
+                            </div>
+
+                            <div onClick={() => setModal(false)} className="flex lg:hidden w-full -mt-20 items-center justify-center flex-col">
+                                <MdClose className='text-primary text-5xl cursor-pointer' />
+                            </div>
+                            <div onClick={() => setModal(false)} className="lg:flex hidden absolute top-3 left-10">
+                                <MdClose className='text-primary text-5xl cursor-pointer' />
                             </div>
                         </div>}
                 </div>

@@ -93,7 +93,7 @@ export const webprojects = [
         name:"GetLinked Design Hackathon",
         type:'Frontend UI Design',
         techstack:'Html, Css , Javascript ', 
-        link:'https://github.com/Litezy/getLinked-Landingpage',
+        link:'https://litezy.github.io/getLinked-Landingpage/',
         img:getlinked,
         desc:'Getlinked design contest.'
     },
@@ -145,7 +145,7 @@ export const webprojects = [
         img:hng,
     },
     {
-        name:"E-commerce App",
+        name:"Fastest E-commerce App",
         type:'Frontend E-commerce UI',
         techstack:'React/ReactRedux , TailwindCss  ',  
         link:'https://sample-ecoms.netlify.app/',
@@ -183,7 +183,7 @@ export const webprojects = [
         name:"Netflix Landing Page",
         type:'Frontend UI',
         techstack:'Html, Css , Javascript ',  
-        link:'https://github.com/Litezy/netflic-clone',
+        link:'https://jovial-narwhal-999893.netlify.app/',
         img:netflix,
     },
     {

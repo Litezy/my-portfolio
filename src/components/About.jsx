@@ -10,7 +10,7 @@ const About = () => {
       <div className="w-full py-3 flex items-start justify-center">
         <div className="w-11/12 mx-auto flex flex-col gap-5 h-full">
           <Link to={`/`}>
-            <FaArrowLeftLong className='text-2xl cursor-pointer' />
+            <FaArrowLeftLong className='text-2xl text-zinc-400 cursor-pointer' />
           </Link>
           <div className="">
             <div className="text-4xl font-bold text-zinc-300">About</div>

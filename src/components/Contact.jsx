@@ -12,7 +12,7 @@ const Contact = () => {
     <div className='w-full mt-14'>
       <div className="w-11/12 mx-auto py-10">
         <Link  to={`/`}>
-          <FaArrowLeftLong className='text-3xl mb-5 cursor-pointer' />
+          <FaArrowLeftLong className='text-2xl text-zinc-400 mb-5 cursor-pointer' />
         </Link>
         <div className="w-full flex items-start justify-between gap-10 flex-col lg:flex-row">
           <div className="flex flex-col lg:w-1/2 w-full gap-5">
