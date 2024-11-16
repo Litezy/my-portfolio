@@ -34,7 +34,7 @@ const Repos = () => {
     // console.log(data)
     return (
         <div className='w-full py-20 my-10 bg-sec'>
-            <div className="pb-10 w-10/12 mx-auto relative">
+            <div className="pb-10 w-11/12 mx-auto relative">
                 <div data-aos='fade-right' data-aos-duration="1000"
                     className="text-xl text-zinc-400 mb-4">Featured Repos</div>
                 {!loading && <div className="w-full absolute top-1/2 right-1/2 -translate-x-1/2 justify-center flex items-center h-full">
@@ -73,9 +73,9 @@ const Repos = () => {
                 
             </div>
             <div className="flex items-center justify-around h-10 w-11/12 lg:w-[35%] mx-auto">
-                    <div data-aos='fade-up' data-aos-duration='2000' className="w-32 h-1 bg-primary"></div>
+                    <div data-aos='fade-up' data-aos-duration='2000' className="w-20 lg:w-32 h-1 bg-primary"></div>
                     <Link to={`/projects`} className="">View all</Link>
-                    <div data-aos='fade-up' data-aos-duration='2000' className="w-32 h-1 bg-primary"></div>
+                    <div data-aos='fade-up' data-aos-duration='2000' className="w-20 lg:w-32 h-1 bg-primary"></div>
                 </div>
         </div>
     )

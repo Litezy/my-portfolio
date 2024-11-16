@@ -10,7 +10,7 @@ import { FaArrowLeftLong } from 'react-icons/fa6';
 const Contact = () => {
   return (
     <div className='w-full mt-14'>
-      <div className="w-10/12 mx-auto py-10">
+      <div className="w-11/12 mx-auto py-10">
         <Link  to={`/`}>
           <FaArrowLeftLong className='text-3xl mb-5 cursor-pointer' />
         </Link>

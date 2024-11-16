@@ -23,7 +23,7 @@ const Intro = () => {
     ]
     return (
         <div className='w-full py-20 bg-sec'>
-            <div className="w-10/12  mx-auto flex  lg:h-[27rem] flex-col lg:flex-row  items-start gap-10">
+            <div className="w-11/12  mx-auto flex  lg:h-[27rem] flex-col lg:flex-row  items-start gap-10">
                 <div className="flex items-start gap-5 flex-col lg:w-1/2 w-full">
                     {webs.map((item, i) => {
                         return (

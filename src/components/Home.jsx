@@ -10,14 +10,14 @@ import Quotes from './Quotes'
 const Home = () => {
     
     return (
-        <div className=' ' >
-            <div className=" w-10/12 mx-auto px-2 pt-24   ">
+        <div className=' w-full ' >
+            <div className=" w-11/12 mx-auto px-2 pt-24   ">
                 <Hero />
             </div>
-            <div className="mt-20 b-black/40">
+            <div className="mt-5 b-black/40">
                 <Intro />
             </div>
-            <div className="mt-10 w-full flex-col flex items-center justify-center py-10">
+            <div className="lg:mt-10 w-full flex-col flex items-center justify-center py-10">
                 <div className="flex items-center justify-around h-10 w-11/12 lg:w-[35%] mx-auto">
                     <div data-aos='fade-up' className="lg:w-32 w-20 h-1 bg-primary"></div>
                     <div className="">Latest Works</div>
@@ -25,7 +25,7 @@ const Home = () => {
                 </div>
                 <Link to={`/projects`} className="text-primary underline">Projects</Link>
             </div>
-            <div className="pb-10 w-10/12 mx-auto">
+            <div className="pb-10 w-11/12 mx-auto">
                 <div className="text-xl text-zinc-400 mb-4">Featured Projects</div>
                 <div className="grid lg:grid-cols-3 gap-20 h-fit">
                     {webprojects.slice(0, 6).map((item, i) => (

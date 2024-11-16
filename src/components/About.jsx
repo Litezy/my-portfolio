@@ -8,7 +8,7 @@ const About = () => {
 
     <div className='w-full  mt-14 bg-alt'>
       <div className="w-full py-3 flex items-start justify-center">
-        <div className="w-10/12 mx-auto flex flex-col gap-5 h-full">
+        <div className="w-11/12 mx-auto flex flex-col gap-5 h-full">
           <Link to={`/`}>
             <FaArrowLeftLong className='text-2xl cursor-pointer' />
           </Link>
@@ -19,7 +19,7 @@ const About = () => {
         </div>
       </div>
       <div className="w-full bg-alt">
-        <div className="w-10/12 relative py-10 mx-auto flex  lg:h-[35rem] flex-col lg:flex-row  items-start justify-between">
+        <div className="w-11/12 relative py-10 mx-auto flex  lg:h-[35rem] flex-col lg:flex-row  items-start justify-between">
           <div data-aos="fade-up-right" data-aos-duration="1000" className="flex flex-col lg:w-1/2 justify-start w-full h-full">
             <img src={logo} className='object-contain w-full h-full rounded-xl' alt="about us image" />
           </div>

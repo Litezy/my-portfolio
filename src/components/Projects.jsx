@@ -47,7 +47,7 @@ const Projects = () => {
     <div className="w-full mt-14">
       <div className='w-full   bg-alt'>
         <div className="w-full py-3 flex items-start justify-center">
-          <div className="w-10/12 mx-auto flex flex-col gap-5 h-full">
+          <div className="w-11/12 mx-auto flex flex-col gap-5 h-full">
             <Link to={`/`}>
               <FaArrowLeftLong className='text-3xl cursor-pointer' />
             </Link>
@@ -59,7 +59,7 @@ const Projects = () => {
         </div>
       </div>
 
-      <div className="my-10 w-10/12 mx-auto">
+      <div className="my-10 w-11/12 mx-auto">
         <div className="grid lg:grid-cols-3 gap-20 h-fit">
           {webprojects.map((item, i) => {
             const isEven = i % 2 === 0
@@ -90,7 +90,7 @@ const Projects = () => {
       <div className="mt-10 w-full ">
         <div className='w-full py-20 my-10 bg-sec relative '>
 
-          <div className="pb-10 w-10/12 mx-auto relative">
+          <div className="pb-10 w-11/12 mx-auto relative">
             <div data-aos='fade-right' data-aos-duration="1000"
               className="text-xl text-zinc-400 ">All Repos</div>
             <div data-aos='fade-left' data-aos-duration="1000" className="text-sm mb-4 text-zinc-400">Including Stackup Codealongs / Quests</div>
@@ -100,7 +100,7 @@ const Projects = () => {
 
             {!loading ? <div
               // data-aos='fade-right' data-aos-duration="1000"
-              className="grid lg:grid-cols-4 grid-cols-2 w-full gap-10 ">
+              className="grid lg:grid-cols-4 grid-cols-1 w-full gap-10 ">
               {records && records.map((item, i) => {
                 const isEven = i % 2 === 0
                 return (
@@ -127,15 +127,8 @@ const Projects = () => {
                 )
               })}
             </div> :
-              <div className="h-96 w-full grid animate-pulse z-10 lg:grid-cols-4 grid-cols-2   gap-10  rounded-md">
-                {Array(8).fill().map((_, i) => {
-                  return (
-                    <div
-                      key={i} className="bg-alt flex flex-col justify-between h-40 w-full px-3 py-2 rounded-md">
-                    </div>
-                  )
-                })}
-              </div>
+
+              <div className="h-96 w-full"></div>
             }
 
 
@@ -145,19 +138,19 @@ const Projects = () => {
 
           {records.length > 0 && (
             <div className="w-10/12 mx-auto  mb-5 p-5">
-
+              <div className="w-full flex flex-col items-center">
+                <span className="text-sm text-gray-200">
+                  Showing <span className="font-semibold text-primary ">{(records.length > 0 && firstIndex === 0) ? '1' : firstIndex + 1}</span> to
+                  <span className="font-semibold text-primary"> {lastIndex > storedUser?.length ? storedUser?.length : lastIndex}</span> of
+                  <span className="font-semibold text-primary "> {storedUser?.length} </span>
+                  Repos
+                </span>
+              </div>
               <div className="flex items-center  justify-between w-full mt-2">
                 <button onClick={prevPage} className="flex items-center justify-center px-4 h-10 text-base font-medium text-white bg-primary rounded-md">
                   Prev
                 </button>
-                <div className="w-full flex flex-col items-center">
-                  <span className="text-sm text-gray-200">
-                    Showing <span className="font-semibold text-primary ">{(records.length > 0 && firstIndex === 0) ? '1' : firstIndex + 1}</span> to
-                    <span className="font-semibold text-primary"> {lastIndex > storedUser?.length ? storedUser?.length : lastIndex}</span> of
-                    <span className="font-semibold text-primary "> {storedUser?.length} </span>
-                    Repos
-                  </span>
-                </div>
+
                 <button onClick={nextPage} className="flex items-center justify-center px-4 h-10 text-base font-medium text-white bg-primary rounded-md">
                   Next
                 </button>
