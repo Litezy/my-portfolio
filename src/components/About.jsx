@@ -34,10 +34,10 @@ const About = () => {
                 <div className="h-full w-1.5 bg-primary"></div>
                 <div data-aos="fade-right" data-aos-duration="1000" className=" text-base self-center">Fullstack Software Developer</div>
               </div>
-              <div data-aos-duration="1000" data-aos="fade-up" className="font-bold text-[1rem] italic ">I'm a dedicated computer engineer and skilled full-stack developer based in Nigeria, West Africa. With a passion for building robust and scalable solutions, I bring a unique blend of creativity and technical expertise to every project.
+              <div data-aos-duration="1000" data-aos="fade-up" className="tracking-wide font-bold text-[1rem] italic ">I'm a dedicated computer engineer and skilled full-stack developer based in Nigeria, West Africa. With a passion for building robust and scalable solutions, I bring a unique blend of creativity and technical expertise to every project.
                 My journey into tech began with a curiosity for how things work, and over the years, I’ve honed my skills in both front-end and back-end technologies. Whether developing efficient APIs, crafting seamless UIs, or optimizing server performance, I approach each challenge with enthusiasm and attention to detail.
                 </div>
-                <div data-aos-duration="1000" data-aos="fade-down" className="font-bold text-[1rem] italic">Beyond coding, I enjoy playing football, writing/composing music, exploring art, and reading, which help fuel my creativity. Looking ahead, I’m eager to contribute to cutting-edge projects and create impactful digital experiences. Let’s build something amazing together!</div>
+                <div data-aos-duration="1000" data-aos="fade-down" className="font-bold tracking-wide text-[1rem] italic">Beyond coding, I enjoy playing football, writing/composing music, exploring art, and reading, which help fuel my creativity. Looking ahead, I’m eager to contribute to cutting-edge projects and create impactful digital experiences. Let’s build something amazing together!</div>
             </div>
             {/* <div data-aos="fade-up"
             data-aos-duration="1000"

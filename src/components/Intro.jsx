@@ -53,7 +53,7 @@ const Intro = () => {
                             <div className="h-full w-1.5 bg-primary"></div>
                             <div data-aos="fade-right" data-aos-duration="1000" className=" text-base self-center">Fullstack Software Developer</div>
                         </div>
-                        <div data-aos-duration="1000" data-aos="fade-up" className="font-bold text-[1rem]  space-x-2">I'm a dedicated computer engineer and skilled full stack developer based in Nigeria, West Africa, with a passion for building robust and scalable solutions. I have a strong foundation in both front-end and back-end technologies, and my work is driven by an enthusiasm for problem-solving and a commitment to creating impactful digital experiences. Whether developing efficient APIs, crafting seamless UIs, or optimizing server performance, I bring a detail-oriented approach to every project. Let's build innovative solutions together!</div>
+                        <div data-aos-duration="1000" data-aos="fade-up" className="font-bold tracking-wide text-[1rem] ">I'm a dedicated computer engineer and skilled full stack developer based in Nigeria, West Africa, with a passion for building robust and scalable solutions. I have a strong foundation in both front-end and back-end technologies, and my work is driven by an enthusiasm for problem-solving and a commitment to creating impactful digital experiences. Whether developing efficient APIs, crafting seamless UIs, or optimizing server performance, I bring a detail-oriented approach to every project. Let's build innovative solutions together!</div>
                     </div>
                     <Link to={`/about`} data-aos="fade-up"
                         data-aos-duration="1000"
