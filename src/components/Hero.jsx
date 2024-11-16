@@ -5,7 +5,7 @@ import react from '../assets/react.png'
 import mysql from '../assets/mysql.png'
 import express from '../assets/express.png'
 
-const Hero = () => {
+const Hero = ({num,loading}) => {
     const techs = [
 
         { name: 'Node.js', image: node },
@@ -41,7 +41,7 @@ const Hero = () => {
                         <div className="text-xs text-zinc-400">years of <br /> experience</div>
                     </div>
                     <div className="flex items-start gap-2">
-                        <div className="text-6xl font-bold">30</div>
+                        <div className="text-6xl font-bold">{loading ? '...' :num}</div>
                         <div className="text-xs text-zinc-400">projects/ <br />contributions</div>
                     </div>
                 </div>

@@ -1,18 +1,38 @@
-import React from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import Hero from './Hero'
 import Intro from './Intro'
 import { Link } from 'react-router-dom'
 import { webprojects } from '../utils/utils'
 import Repos from './Repos'
 import Quotes from './Quotes'
+import axios from 'axios'
 
 
 const Home = () => {
-    
+
+    const [num, setNum] = useState("")
+    const [loading, setLoading] = useState(false)
+    const fetchRepos = useCallback(async () => {
+        setLoading(true)
+        try {
+            const res = await axios.get(`https://api.github.com/users/litezy/repos?per_page=100&page=1`)
+            if (res.status !== 200) return;
+            setNum(res.data.length)
+        } catch (error) {
+            console.log(`Error in fetching repos ${error}`)
+        } finally {
+            setLoading(false)
+        }
+    })
+
+
+    useEffect(() => {
+        fetchRepos()
+    }, [])
     return (
         <div className=' w-full ' >
             <div className=" w-11/12 mx-auto px-2 pt-24   ">
-                <Hero />
+                <Hero num={num} loading={loading} />
             </div>
             <div className="mt-5 b-black/40">
                 <Intro />
@@ -55,8 +75,8 @@ const Home = () => {
                     ))}
                 </div>
             </div>
-            <Repos/>
-            <Quotes/>
+            <Repos />
+            <Quotes />
         </div>
     )
 }
