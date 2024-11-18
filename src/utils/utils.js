@@ -23,6 +23,8 @@ import todo from '../assets/projects/todo.png'
 import tictac from '../assets/projects/tictac.png'
 import ecom from '../assets/projects/ecom.png'
 import toast from 'react-hot-toast'
+import { useLocation } from "react-router-dom"
+import { useEffect } from "react"
 
 
 

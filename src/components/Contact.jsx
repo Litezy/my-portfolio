@@ -1,5 +1,5 @@
 import React from 'react'
-import { BsTwitterX } from "react-icons/bs";
+import { BsFacebook, BsTwitterX, BsWhatsapp } from "react-icons/bs";
 import { SiWhatsapp } from "react-icons/si";
 import { FaFacebook } from "react-icons/fa";
 import { Link } from 'react-router-dom';
@@ -21,11 +21,11 @@ const Contact = () => {
             <div data-aos="fade-right" data-aos-duration="1000" className="text-lg">I’m always excited to connect, collaborate, or help you bring your ideas to life. Whether you’re looking for a developer to work on your next project or just want to say hi, feel free to reach out. Let’s create something amazing!</div>
             <div data-aos="fade-up-left" data-aos-duration="1000" className="flex items-start flex-col gap-2">
               <div className="text-lg">Connect with me:</div>
-              <div className="flex items-center gap-2">
-                <Link className='text-xl text-zinc-300' target="_blank" ><BsTwitterX /></Link>
+              <div className="flex items-center gap-5">
+                <Link to={`https://x.com/_litezy/`} className='text-lg  text-zinc-300' target="_blank" ><BsTwitterX /></Link>
 
-                <Link className='text-xl text-zinc-300' target="_blank" ><SiWhatsapp /></Link>
-                <Link className='text-xl text-zinc-300' target="_blank" ><FaFacebook /></Link>
+                <Link lassName='text-xl text-zinc-300'  to="https://wa.me/+2348134972329?text=Hi%20I%20would%20love%20to%20connect!" target="_blank"> <BsWhatsapp /></Link>
+                <Link to={`https://web.facebook.com/Iammrlite/`} className='text-xl text-zinc-300' target="_blank" ><BsFacebook /></Link>
               </div>
             </div>
           </div>

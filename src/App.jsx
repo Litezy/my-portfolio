@@ -1,7 +1,5 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import AppLayout from './utils/AppLayout'
 import Home from './components/Home'
 import Contact from './components/Contact'
@@ -10,22 +8,44 @@ import About from './components/About'
 
 
 function App() {
-
+  // Define routes
   const GeneralRoutes = [
-    {path:'/', Component: Home},
-    {path:'contact', Component: Contact},
-    {path:'projects', Component: Projects},
-    {path:'about', Component: About}
-]
+    { path: '/', Component: Home },
+    { path: 'contact', Component: Contact },
+    { path: 'projects', Component: Projects },
+    { path: 'about', Component: About }
+  ];
+
   return (
-   <BrowserRouter>
-   <Routes>
-    {GeneralRoutes.map((item,i) => (
-      <Route key={i} path={item.path} element={<AppLayout><item.Component/></AppLayout>} />
-    ))}
-   </Routes>
-   </BrowserRouter>
-  )
+    <BrowserRouter>
+      <ScrollToTopOnRouteChange />
+      <Routes>
+        {GeneralRoutes.map((item, i) => (
+          <Route
+            key={i}
+            path={item.path}
+            element={
+              <AppLayout>
+                <item.Component />
+              </AppLayout>
+            }
+          />
+        ))}
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+const  ScrollToTopOnRouteChange =()=> {
+  const location = useLocation();
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  useEffect(() => {
+    scrollToTop();
+  }, [location]);
+
+  return null; 
+}
+
+export default App;
