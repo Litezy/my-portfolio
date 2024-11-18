@@ -79,7 +79,7 @@ const Projects = () => {
                     <div className="text-zinc-400 text-sm">Tech Stack Used:</div>
                     <div className="">{item.techstack}</div>
                   </div>
-                  <Link target='blank' className='underline text-primary' to={`${item.link}`}>view</Link>
+                  <Link target='blank' className='underline text-primary' to={`${item.link}`}>{item.online ? 'View Site':'View Repo'}</Link>
                 </div>
               </div>
             )
@@ -93,7 +93,7 @@ const Projects = () => {
           <div className="pb-10 w-11/12 mx-auto relative">
             <div data-aos='fade-right' data-aos-duration="1000"
               className="text-xl text-zinc-400 ">All Repos</div>
-            <div data-aos='fade-left' data-aos-duration="1000" className="text-sm mb-4 text-zinc-400">Including Stackup Codealongs / Quests</div>
+            <div data-aos='fade-left' data-aos-duration="1000" className="text-sm mb-4 text-zinc-400">Including <Link to={`https://earn.stackup.dev/`} target='blank' className='underline text-primary font-bold'>Stackup</Link> Codealongs / Quests</div>
             {loading && <div className=" absolute top-1/2 z-40 left-1/2 -translate-x-1/2   h-full">
               <Loader />
             </div>}
@@ -109,7 +109,7 @@ const Projects = () => {
                     key={i} className="bg-alt flex flex-col justify-between h-40 w-full px-3 py-2 rounded-md">
                     <div className="flex items-center justify-between">
                       <div className="capitalize">{item.name}</div>
-                      <Link target='blank' className='text-primary underline' to={item?.html_url}>view</Link>
+                      <Link target='blank' className='text-primary underline' to={item?.html_url}>view repo</Link>
                     </div>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">

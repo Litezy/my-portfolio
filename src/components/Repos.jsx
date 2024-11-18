@@ -52,7 +52,7 @@ const Repos = () => {
                                 key={i} className="bg-alt flex flex-col justify-between h-40 w-full px-3 py-2 rounded-md">
                                 <div className="flex items-center justify-between">
                                     <div className="capitalize">{item.name}</div>
-                                    <Link target='blank' className='text-primary underline' to={item?.html_url}>view</Link>
+                                    <Link target='blank' className='text-primary underline' to={item?.html_url}>view repo</Link>
                                 </div>
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-2">

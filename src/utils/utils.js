@@ -73,6 +73,7 @@ export const webprojects = [
         techstack:'React/ReactRedux , TailwindCss , Nodejs , Mysql',
         link:'https://pinerockcreditunion.com/',
         img:pinerock,
+        online:true,
         desc:'Online Banking for the everyday people.'
     },
     {
@@ -87,8 +88,9 @@ export const webprojects = [
         name:"Furniflex",
         type:'Full stack web Application',
         techstack:'React/ReactRedux , TailwindCss , Nodejs , Msql ',
-        link:'https://github.com/Litezy/furniflex-front',
+        link:'https://master--furniflex-front.netlify.app/',
         img:furniflex,
+        online:true,
         desc:'E-commerce market place with seamless checkout system.'
     },
     {
@@ -97,6 +99,7 @@ export const webprojects = [
         techstack:'Html, Css , Javascript ', 
         link:'https://litezy.github.io/getLinked-Landingpage/',
         img:getlinked,
+        online:true,
         desc:'Getlinked design contest.'
     },
     {
@@ -105,7 +108,7 @@ export const webprojects = [
         techstack:'NextJs , TailwindCss', 
         link:'https://github.com/slovetechnology/nspare',
         img:nspare,
-        desc:'Contributed to the UI design of Npsare startup company that connect car owners to nearest mechanics and shops to get spare parts for their autos. (Not live yet).'
+        desc:'Contributed to the UI design of Npsare startup company that connect car owners to nearest mechanics and shops.(Not live yet).'
     },
     {
         name:"Greenford Bank",
@@ -113,6 +116,7 @@ export const webprojects = [
         techstack:'React/ReactRedux , TailwindCss , Nodejs , Axios , Msql ', 
         link:'https://greenfordbank.com/',
         img:greenford,
+        online:true,
         desc:'Banking system with seamless transactions.'
     },
     {
@@ -121,6 +125,7 @@ export const webprojects = [
         techstack:'React/ReactRedux , TailwindCss , Nodejs , Axios , Msql ', 
         link:'https://secureinvest.org/',
         img:secureinvest,
+        online:true,
         desc:'Secure your crypto portfolio and investments.'
     },
     {
@@ -151,6 +156,7 @@ export const webprojects = [
         type:'Frontend E-commerce UI',
         techstack:'React/ReactRedux , TailwindCss  ',  
         link:'https://sample-ecoms.netlify.app/',
+        online:true,
         img:ecom,
     },
     {
@@ -187,6 +193,7 @@ export const webprojects = [
         techstack:'Html, Css , Javascript ',  
         link:'https://jovial-narwhal-999893.netlify.app/',
         img:netflix,
+        online:true
     },
     {
         name:"TicTac Toe Game",
