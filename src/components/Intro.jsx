@@ -46,14 +46,15 @@ const Intro = () => {
                 <div className="w-full lg:w-1/2 flex py-2 gap-10 items-start justify-between h-full flex-col">
                     <div className="flex items-start gap-5 flex-col">
                         <div className="font-thin text-base">Introduction</div>
-                        <div data-aos="fade-left" data-aos-duration="1000" className="font-bold text-4xl">Hello, I'm Bethel Nnadi (Litezy)</div>
+                        <div data-aos="fade-left" data-aos-duration="1000" className="font-bold text-3xl">Hi, I'm Bethel Nnadi (Litezy)</div>
                     </div>
                     <div className="flex items-start gap-3 flex-col">
                         <div className="w-full bg-[#2d2e32] gap-3 h-12 flex  items-start">
                             <div className="h-full w-1.5 bg-primary"></div>
                             <div data-aos="fade-right" data-aos-duration="1000" className=" text-base self-center">Fullstack Software Developer</div>
                         </div>
-                        <div data-aos-duration="1000" data-aos="fade-up" className="font-bold tracking-wide text-[1rem] ">I'm a dedicated computer engineer and skilled full stack developer based in Nigeria, West Africa, with a passion for building robust and scalable solutions. I have a strong foundation in both front-end and back-end technologies, and my work is driven by an enthusiasm for problem-solving and a commitment to creating impactful digital experiences. Whether developing efficient APIs, crafting seamless UIs, or optimizing server performance, I bring a detail-oriented approach to every project. Let's build innovative solutions together!</div>
+                        <div data-aos-duration="1000" data-aos="fade-up" className="font-bold tracking-wide text-[1rem] ">I'm a dedicated computer engineer and skilled full stack developer based in Nigeria, West Africa, with a passion for building robust and scalable solutions. I have a strong foundation in both front-end and back-end technologies, and my work is driven by an enthusiasm for problem-solving and a commitment to creating impactful digital experiences. </div>
+                        <div data-aos-duration="1000" data-aos="fade-down" className="font-bold tracking-wide text-[1rem]">Whether developing efficient APIs, crafting seamless UIs, or optimizing server performance, I bring a detail-oriented approach to every project. Let's build innovative solutions together!</div>
                     </div>
                     <Link to={`/about`} data-aos="fade-up"
                         data-aos-duration="1000"

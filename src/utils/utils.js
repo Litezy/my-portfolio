@@ -23,8 +23,8 @@ import todo from '../assets/projects/todo.png'
 import tictac from '../assets/projects/tictac.png'
 import ecom from '../assets/projects/ecom.png'
 import toast from 'react-hot-toast'
-import { useLocation } from "react-router-dom"
-import { useEffect } from "react"
+import { FaCheckCircle } from "react-icons/fa";
+
 
 
 
@@ -33,16 +33,24 @@ import { useEffect } from "react"
 export const errorMessage = (message) => {
     return toast.error(message, {
         duration: 4000,
-        position: "top-center"
+        position: "top-center",
     })
 }
+
+
+
 export const successMessage = (message) => {
     return toast.success(message, {
         duration: 4000,
         position: "top-center",
-        
-    })
-}
+        // style: {
+        //     background: "#FFFFFF", 
+        //     color: "#fe04b4",      
+        //     borderRadius: "5px",  
+        // },
+    });
+};
+
 export const navs = [
     {
         name:'Home',

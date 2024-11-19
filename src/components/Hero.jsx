@@ -6,7 +6,7 @@ import mysql from '../assets/mysql.png'
 import express from '../assets/express.png'
 import { AiOutlineMessage } from 'react-icons/ai'
 
-const Hero = ({ num, loading }) => {
+const Hero = ({ num, loading,repo }) => {
     const techs = [
 
         { name: 'Node.js', image: node },
@@ -15,9 +15,6 @@ const Hero = ({ num, loading }) => {
 
     ]
    
-
-   
-
 
     return (
         <div className="flex items-center relative w-full bg-[#2d2e32]] flex-col lg:flex-row gap-20">
@@ -48,7 +45,7 @@ const Hero = ({ num, loading }) => {
                         <div className="text-xs text-zinc-400">years of <br /> experience</div>
                     </div>
                     <div className="flex items-start gap-2">
-                        <div className="text-6xl font-bold">{loading ? '...' : num}</div>
+                        <div className="text-6xl font-bold">{loading ? '...' : repo ? repo :num}</div>
                         <div className="text-xs text-zinc-400">projects/ <br />contributions</div>
                     </div>
                 </div>

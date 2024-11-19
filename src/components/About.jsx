@@ -27,7 +27,7 @@ const About = () => {
           <div className="w-full lg:w-1/2 flex py-2 gap-10 items-start justify-between h-full flex-col">
             <div className="flex items-start gap-5 flex-col">
               <div className="font-thin text-base">Introduction</div>
-              <div data-aos="fade-left" data-aos-duration="1000" className="font-bold text-4xl">Hello, I'm Bethel Nnadi (Litezy)</div>
+              <div data-aos="fade-left" data-aos-duration="1000" className="font-bold text-4xl">Hi, I'm Bethel Nnadi (Litezy)</div>
             </div>
             <div className="flex items-start gap-3 flex-col">
               <div className="w-full bg-sec gap-3 h-12 flex  items-start">

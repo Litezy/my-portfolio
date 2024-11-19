@@ -8,7 +8,7 @@ import Quotes from './Quotes'
 import axios from 'axios'
 import { IoIosClose } from "react-icons/io";
 import { AiOutlineMessage } from 'react-icons/ai'
-
+export const reponame = 'Allrepos'
 
 const Home = () => {
 
@@ -18,12 +18,14 @@ const Home = () => {
     const [contact, setContact] = useState(false)
     const contactdiv = useRef(null)
 
+    
     const fetchRepos = useCallback(async () => {
         setLoading(true)
         try {
             const res = await axios.get(`https://api.github.com/users/litezy/repos?per_page=100&page=1`)
             if (res.status !== 200) return;
             setNum(res.data.length)
+            localStorage.setItem(reponame, JSON.stringify(res.data.length))
         } catch (error) {
             console.log(`Error in fetching repos ${error}`)
         } finally {
@@ -66,6 +68,7 @@ const Home = () => {
       })
     }
 
+    const storedRepo = JSON.parse(localStorage.getItem(reponame))
     return (
         <div className=' w-full relative  ' >
 
@@ -104,7 +107,7 @@ const Home = () => {
                     </div>}
 
 
-                <Hero num={num} loading={loading} />
+                <Hero num={num} repo={storedRepo} loading={loading} />
             </div>
             <div className="mt-5 b-black/40">
                 <Intro />

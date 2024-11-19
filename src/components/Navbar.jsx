@@ -91,7 +91,7 @@ const Navbar = () => {
                             className="absolute bg-sec w-full right-0 top-0 h-[50dvh] rounded-s-md">
                             <div className="flex  gap-20 items-start justify-center py-5  h-full">
                                 <div className="flex flex-col gap-5">
-                                    <div className="text-base underline text-primary">Social Handles</div>
+                                    <div className="text-base underline text-center text-primary">Handles</div>
                                     <Link target='blank' to={`https://x.com/_litezy`} className=" cursor-pointer flex px-5 items-center  gap-3">
                                         <div className="">Twitter</div>
                                         <BsTwitterX />
@@ -108,7 +108,7 @@ const Navbar = () => {
                                 </div>
 
                                 <div className="flex flex-col gap-5">
-                                    <div className="text-base text-primary underline">NavLinks</div>
+                                    <div className="text-base text-primary text-center underline">NavLinks</div>
                                     <div className="flex flex-col gap-3">
                                         {navs.map((item, i) => {
                                             return (

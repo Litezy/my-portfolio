@@ -42,3 +42,8 @@ body {
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+
+
+.react-hot-toast-success > svg {
+  color: #fe04b4; 
+}
