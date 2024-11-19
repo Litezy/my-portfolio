@@ -106,14 +106,14 @@ const Contact = () => {
   };
   
   return (
-    <div className='w-full mt-14 relative'>
+    <div className='w-full mt-8 relative'>
      { loading && <div className="z-50 fixed w-full h-[100dvh] overflow-hidden bg-sec/90   ">
         <div className="w-fit absolute top-1/4 left-1/2 -translate-x-1/2 ">
           <Lottie options={defaultLoad} width={150} />
           <div className="text-center"><Sending /></div>
         </div>
       </div>}
-      {!animate &&
+      {animate &&
         <div className="fixed z-50 w-full h-[100dvh] overflow-hidden bg-sec/90">
           <div className='fixed left-1/2 w-full rounded-md -translate-x-1/2'>
             <Lottie options={defaultOptions} height={400} />
