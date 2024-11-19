@@ -5,6 +5,7 @@ import { webprojects } from '../utils/utils'
 import { localName } from './Repos'
 import { IoLogoGithub, IoMdStar } from 'react-icons/io'
 import Loader from './Loader'
+import { GoMoveToTop } from "react-icons/go";
 
 
 const Projects = () => {
@@ -30,7 +31,7 @@ const Projects = () => {
     }
   };
 
-
+  const [scrollToTop, setScrollToTop] = useState(false)
   useEffect(() => {
     setLoading(true); // Start loader when `currentPage` changes
     // Simulate data fetching
@@ -41,10 +42,36 @@ const Projects = () => {
     return () => clearTimeout(timer); // Clean up timer
   }, [currentPage]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 1000) {
+        setScrollToTop(true)
+      } else {
+        setScrollToTop(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
-
+  const ScrollUp = () =>{
+    window.scrollTo({top: 0, behavior: 'smooth'})
+  }
   return (
-    <div className="w-full mt-14">
+    <div className="w-full mt-14 relative">
+      
+      {scrollToTop && 
+      <div 
+      data-aos='zoom-in' data-aos-duration="1000"
+      onClick={ScrollUp} className=" cursor-pointer fixed bottom-10 right-2 lg:right-5 z-50 flex rounded-md items-center p-2 text-sec bg-primary">
+        <GoMoveToTop className='font-bold'/>
+        <div className="">Top</div>
+      </div>
+      }
+
+
       <div className='w-full   bg-alt'>
         <div className="w-full py-3 flex items-start justify-center">
           <div className="w-11/12 mx-auto flex flex-col gap-5 h-full">
@@ -79,7 +106,7 @@ const Projects = () => {
                     <div className="text-zinc-400 text-sm">Tech Stack Used:</div>
                     <div className="">{item.techstack}</div>
                   </div>
-                  <Link target='blank' className='underline text-primary' to={`${item.link}`}>{item.online ? 'View Site':'View Repo'}</Link>
+                  <Link target='blank' className='underline text-primary' to={`${item.link}`}>{item.online ? 'View Site' : 'View Repo'}</Link>
                 </div>
               </div>
             )

@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import js from '../assets/js.png'
 import node from '../assets/node.png'
 import react from '../assets/react.png'
 import mysql from '../assets/mysql.png'
 import express from '../assets/express.png'
+import { AiOutlineMessage } from 'react-icons/ai'
 
-const Hero = ({num,loading}) => {
+const Hero = ({ num, loading }) => {
     const techs = [
 
         { name: 'Node.js', image: node },
@@ -13,8 +14,14 @@ const Hero = ({num,loading}) => {
         { name: 'React', image: react },
 
     ]
+   
+
+   
+
+
     return (
-        <div className="flex items-center w-full bg-[#2d2e32]] flex-col lg:flex-row gap-20">
+        <div className="flex items-center relative w-full bg-[#2d2e32]] flex-col lg:flex-row gap-20">
+           
             <div className="flex items-start flex-col gap-6   w-full lg:w-1/2">
                 <div data-aos="fade-right"
                     data-aos-duration="1000"
@@ -41,11 +48,12 @@ const Hero = ({num,loading}) => {
                         <div className="text-xs text-zinc-400">years of <br /> experience</div>
                     </div>
                     <div className="flex items-start gap-2">
-                        <div className="text-6xl font-bold">{loading ? '...' :num}</div>
+                        <div className="text-6xl font-bold">{loading ? '...' : num}</div>
                         <div className="text-xs text-zinc-400">projects/ <br />contributions</div>
                     </div>
                 </div>
             </div>
+
             <div data-aos="fade-up"
                 data-aos-duration="2000"
                 className="lg:w-1/2 w-full">
