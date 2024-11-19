@@ -44,7 +44,7 @@ const Projects = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 1000) {
+      if (window.scrollY > 100) {
         setScrollToTop(true)
       } else {
         setScrollToTop(false)
