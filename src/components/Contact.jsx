@@ -113,13 +113,13 @@ const Contact = () => {
           <div className="text-center"><Sending /></div>
         </div>
       </div>}
-      {animate &&
+      {!animate &&
         <div className="fixed z-50 w-full h-[100dvh] overflow-hidden bg-sec/90">
-          <div className='fixed left-1/2 rounded-md -translate-x-1/2'>
+          <div className='fixed left-1/2 w-full rounded-md -translate-x-1/2'>
             <Lottie options={defaultOptions} height={400} />
             <div className="text-center text-primary font-bold text-xl">Thank you for reaching out!</div>
           </div>
-          <div onClick={() => setAnimate(false)} className=" cursor-pointer absolute top-20 right-20"><AiOutlineClose className='text-4xl' /></div>
+          <div onClick={() => setAnimate(false)} className=" cursor-pointer absolute top-10 right-10"><AiOutlineClose className='text-4xl' /></div>
         </div>
       }
       <div className="w-11/12 mx-auto py-10">
