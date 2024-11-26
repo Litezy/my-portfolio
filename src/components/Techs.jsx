@@ -4,7 +4,7 @@ const Techs = () => {
     const techs = [
         {
             name: 'Frontend',
-            others: ['React', 'TailwindCSS', 'Material UI', 'Flowbite', 'AOS', 'Framer Motion']
+            others: ['ReactJs', "NextJs", 'TailwindCSS', 'Material UI', 'Flowbite', 'AOS', 'Framer Motion']
         },
         {
             name: 'Backend',
