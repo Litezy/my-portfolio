@@ -7,17 +7,17 @@ const Intro = () => {
     const webs = [
         {
             name: 'Web Applications',
-            proj: 20,
+            proj: '10+',
             time: 'Completed'
         },
         {
             name: 'Websites',
-            proj: 30,
+            proj: '20+',
             time: 'Completed'
         },
         {
             name: 'Deployed',
-            proj: 4,
+            proj: '8+',
             time: 'Completed'
         }
     ]
@@ -31,9 +31,9 @@ const Intro = () => {
                                 data-aos-duration="1000"
                                 className="bg-[#2d2e32] flex items-start justify-between w-full p-2">
                                 <div className="flex items-start flex-col gap-3">
-                                    <div className="text-primary text-xl font-semibold">{item.name}</div>
+                                    <div className="text-primary text-xl font-bold">{item.name}</div>
                                     <div className="text-zinc-400">{item.time}</div>
-                                    <div className="underline">{item.proj} projects</div>
+                                    <div className="">{item.proj} projects</div>
                                 </div>
                                 <div className="p-3 rounded-full bg-sec">
                                     <BsArrowUpRightCircleFill className='' />
