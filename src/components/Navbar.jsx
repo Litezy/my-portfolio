@@ -88,31 +88,31 @@ const Navbar = () => {
                             ref={modaldiv}
                             data-aos="fade-left"
                             data-aos-duration="2000"
-                            className="absolute bg-sec w-full right-0 top-0 h-[50dvh] rounded-s-md">
-                            <div className="flex  gap-20 items-start justify-center py-5  h-full">
+                            className="absolute bg-sec w-full right-0 top-0 h-[100dvh] rounded-s-md">
+                            <div className="flex  gap-20 items-center justify-center flex-col py-5   h-full">
                                 <div className="flex flex-col gap-5">
-                                    <div className="text-base underline text-center text-primary">Handles</div>
+                                    {/* <div className="text-base underline text-center text-primary">Handles</div> */}
                                     <Link target='blank' to={`https://x.com/_litezy`} className=" cursor-pointer flex px-5 items-center  gap-3">
-                                        <div className="">Twitter</div>
-                                        <BsTwitterX />
+                                        <div className="text-2xl">Twitter</div>
+                                        <BsTwitterX className='text-2xl' />
                                     </Link>
                                     <Link target='blank' to={`https://github.com/Litezy`} className="flex cursor-pointer px-5 items-center gap-3">
-                                        <div className="">Github</div>
-                                        <FaGithub />
+                                        <div className="text-2xl">Github</div>
+                                        <FaGithub className='text-2xl' />
                                     </Link>
                                      <a href="mailto:liteb237@gmail.com?subject=Hello&body=I%20would%20like%20to%20connect%20with%20you."
                                     className=" cursor-pointer flex px-5 items-center gap-3">
-                                        <div className="">Email</div>
-                                        <CiMail className='text-white text-xl' />
+                                        <div className="text-2xl">Email</div>
+                                        <CiMail className='text-white text-2xl' />
                                     </a>
                                 </div>
 
                                 <div className="flex flex-col gap-5">
-                                    <div className="text-base text-primary text-center underline">NavLinks</div>
+                                    {/* <div className="text-base text-primary text-center underline">NavLinks</div> */}
                                     <div className="flex flex-col gap-3">
                                         {navs.map((item, i) => {
                                             return (
-                                                <Link key={i} onClick={() => setModal(false)} to={item.url} className={`${location.pathname === item.url && 'bg-primary'} flex items-center   py-1.5 px-3 cursor-pointer hover:bg-primary`}>{item.name}</Link>
+                                                <Link key={i} onClick={() => setModal(false)} to={item.url} className={`${location.pathname === item.url && 'bg-primary'} flex items-center   py-1.5 px-3 text-2xl cursor-pointer hover:bg-primary`}>{item.name}</Link>
                                             )
                                         })}
                                     </div>

@@ -17,7 +17,7 @@ const Repos = () => {
             const res = await axios.get(`https://api.github.com/users/litezy/repos?per_page=100&page=1`)
             if (res.status !== 200) return;
             // successMessage(`fetch success`)
-            const localStore = localStorage.setItem(localName, JSON.stringify(res.data))
+            localStorage.setItem(localName, JSON.stringify(res.data))
             setData(res.data)
         } catch (error) {
             console.log(`Error in fetching repos ${error}`)

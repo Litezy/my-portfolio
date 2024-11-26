@@ -65,7 +65,7 @@ const Projects = () => {
       {scrollToTop && 
       <div 
       data-aos='zoom-in' data-aos-duration="1000"
-      onClick={ScrollUp} className=" cursor-pointer fixed bottom-10 right-2 lg:right-5 z-50 flex rounded-md items-center p-2 text-sec bg-primary">
+      onClick={ScrollUp} className=" cursor-pointer text-white fixed bottom-10 right-2 lg:right-5 z-50 flex rounded-md items-center p-2  bg-primary">
         <GoMoveToTop className='font-bold'/>
         <div className="">Top</div>
       </div>

@@ -87,7 +87,7 @@ const Contact = () => {
         message: forms.message,
       };
   
-      const response = await emailjs.send(
+      await emailjs.send(
         "service_s0c9sai", 
         "template_ja604gv", 
         templateParams, 

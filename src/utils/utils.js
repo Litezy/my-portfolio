@@ -78,7 +78,7 @@ export const webprojects = [
     {
         name:"Pinerock Credit Union",
         type:'Full stack web Application',
-        techstack:'React/ReactRedux , TailwindCss , Nodejs , Mysql',
+        techstack:'React/ReactRedux , TailwindCss , Nodejs , Mysql , Material UI',
         link:'https://pinerockcreditunion.com/',
         img:pinerock,
         online:true,
@@ -121,7 +121,7 @@ export const webprojects = [
     {
         name:"Greenford Bank",
         type:'Full stack web application',
-        techstack:'React/ReactRedux , TailwindCss , Nodejs , Axios , Msql ', 
+        techstack:'React/ReactRedux , TailwindCss , Nodejs , Axios , Msql, Material UI ', 
         link:'https://greenfordbank.com/',
         img:greenford,
         online:true,
