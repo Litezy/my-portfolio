@@ -20,7 +20,7 @@ const Techs = () => {
         },
         {
             name: 'DevOps & Deployment',
-            others: ['CI/CD Pipelines', 'Netlify', 'Vercel']
+            others: ['CI/CD Pipelines', 'Netlify', 'Vercel', 'GitHub Actions']
         },
         {
             name: 'Other Tools',
