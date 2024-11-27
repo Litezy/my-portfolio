@@ -133,11 +133,11 @@ const Home = () => {
             };
 
             await emailjs.send(
-                "service_s0c9sai",
-                "template_ja604gv",
-                templateParams,
-                "Tx6jTZZjELpG-xQ5B"
-            );
+                import.meta.env.VITE_SERVICE, 
+                import.meta.env.VITE_TEMPLATE, 
+                templateParams, 
+                import.meta.env.VITE_MYID
+              );
             setAnimate(true)
             successSend('Message sent successfully');
             setForms({ name: "", email: "", message: "" });
@@ -167,7 +167,7 @@ const Home = () => {
             </div>}
             {animate &&
                 <div className="fixed z-50 w-full h-[100dvh] overflow-hidden bg-sec/90">
-                    <div className='fixed left-1/2 w-fit rounded-md -translate-x-1/2'>
+                    <div className='fixed left-1/2 w-full rounded-md -translate-x-1/2'>
                         <Lottie options={defaultOptions} height={400} />
                         <div className="text-center text-primary font-bold text-xl">Thank you for reaching out!</div>
                     </div>

@@ -88,14 +88,20 @@ const Contact = () => {
       };
   
       await emailjs.send(
-        "service_s0c9sai", 
-        "template_ja604gv", 
+        import.meta.env.VITE_SERVICE, 
+        import.meta.env.VITE_TEMPLATE, 
         templateParams, 
-        "Tx6jTZZjELpG-xQ5B"
+        import.meta.env.VITE_MYID
       );
       setAnimate(true)
       successSend('Message sent successfully');
-      setForms({ name: "", email: "", message: "" }); // Clear the form
+      setForms({ name: "", email: "", message: "" }); 
+      await new Promise((resolve) =>{ 
+        setTimeout(()=>{
+           setAnimate(false);
+           resolve();
+        },3000)
+    })
   
     } catch (error) {
       console.error('Failed to send email:', error.message || error);
