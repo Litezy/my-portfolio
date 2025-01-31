@@ -11,9 +11,9 @@ function App() {
   // Define routes
   const GeneralRoutes = [
     { path: '/', Component: Home },
-    { path: 'contact', Component: Contact },
-    { path: 'projects', Component: Projects },
-    { path: 'about', Component: About }
+    { path: '/contact', Component: Contact },
+    { path: '/projects', Component: Projects },
+    { path: '/about', Component: About }
   ];
 
   return (
