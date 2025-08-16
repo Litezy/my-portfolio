@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/logo.jpeg'
+import logo from '../assets/belziee.jpg'
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 
@@ -27,21 +27,31 @@ const About = () => {
           <div className="w-full lg:w-1/2 flex py-2 gap-10 items-start justify-between h-full flex-col">
             <div className="flex items-start gap-5 flex-col">
               <div className="font-thin text-base">Introduction</div>
-              <div data-aos="fade-left" data-aos-duration="1000" className="font-bold text-4xl">Hi, I'm Bethel Nnadi (Litezy)</div>
+              <div data-aos="fade-left" data-aos-duration="1000" className="font-bold text-4xl">Hi, I'm Bethel Nnadi (Belziee)</div>
             </div>
             <div className="flex items-start gap-3 flex-col">
               <div className="w-full bg-sec gap-3 h-12 flex  items-start">
                 <div className="h-full w-1.5 bg-primary"></div>
-                <div data-aos="fade-right" data-aos-duration="1000" className=" text-base self-center">Fullstack Software Developer</div>
-              </div>
-              <div data-aos-duration="1000" data-aos="fade-up" className="tracking-wide font-bold text-[1rem] italic ">I'm a dedicated computer engineer and skilled full-stack developer based in Nigeria, West Africa. With a passion for building robust and scalable solutions, I bring a unique blend of creativity and technical expertise to every project.
-                My journey into tech began with a curiosity for how things work, and over the years, I’ve honed my skills in both front-end and back-end technologies. Whether developing efficient APIs, crafting seamless UIs, or optimizing server performance, I approach each challenge with enthusiasm and attention to detail.
+                <div data-aos="fade-right" data-aos-duration="1000" className=" text-base self-center">
+                  Fullstack Software & Smart Contract Developer
                 </div>
-                <div data-aos-duration="1000" data-aos="fade-down" className="font-bold tracking-wide text-[1rem] italic">Beyond coding, I enjoy playing football, writing/composing music, exploring art, and reading, which help fuel my creativity. Looking ahead, I’m eager to contribute to cutting-edge projects and create impactful digital experiences. Let’s build something amazing together!</div>
+              </div>
+              <div data-aos-duration="1000" data-aos="fade-up" className="tracking-wide font-bold text-[1rem] italic ">
+                I'm a dedicated computer engineer and skilled full-stack & smart contract developer based in Nigeria, West Africa. 
+                With a passion for building robust, scalable, and decentralized solutions, I bring a unique blend of creativity 
+                and technical expertise to every project.
+                My journey into tech began with a curiosity for how things work, and over the years, I’ve honed my skills in 
+                front-end, back-end, and blockchain development. Whether developing efficient APIs, crafting seamless UIs, 
+                optimizing server performance, or writing secure smart contracts, I approach each challenge with enthusiasm 
+                and attention to detail.
+              </div>
+              <div data-aos-duration="1000" data-aos="fade-down" className="font-bold tracking-wide text-[1rem] italic">
+                Beyond coding, I enjoy playing football, writing/composing music, exploring art, and reading, which help fuel my creativity. 
+                Looking ahead, I’m eager to contribute to cutting-edge projects in both software and Web3, creating impactful digital experiences. 
+                Let’s build something amazing together!
+              </div>
             </div>
-            {/* <div data-aos="fade-up"
-            data-aos-duration="1000"
-            className="underline text-primary">Read More</div> */}
+            
           </div>
         </div>
       </div>

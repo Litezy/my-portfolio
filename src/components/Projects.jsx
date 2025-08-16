@@ -106,7 +106,7 @@ const Projects = () => {
                     <div className="text-zinc-400 text-sm">Tech Stack Used:</div>
                     <div className="">{item.techstack}</div>
                   </div>
-                  <Link target='blank' className='underline text-primary' to={`${item.link}`}>{item.online ? 'View Site' : 'View Repo'}</Link>
+                  <Link target='blank' className='underline text-primary' to={`${item.link}`}>{item.online ? 'View App' : 'View Repo'}</Link>
                 </div>
               </div>
             )

@@ -247,7 +247,7 @@ const Home = () => {
                                     <div className="text-zinc-400 text-sm">Brief Description:</div>
                                     <div className="">{item.desc}</div>
                                 </div>
-                                <Link target='blank' className='underline text-primary' to={`${item.link}`}>{item.online ? 'View Site' : 'View Repo'}</Link>
+                                <Link target='blank' className='underline text-primary' to={`${item.link}`}>{item.online ? 'View App' : 'View Repo'}</Link>
                                 {/* <a href="http://" target="_blank" rel="noopener noreferrer"></a> */}
                             </div>
                         </div>

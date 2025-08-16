@@ -22,7 +22,7 @@ const Footer = () => {
     },
     {
       img:<FaLinkedin/>,
-      link:'https://www.linkedin.com/in/bethel-nnadi-4a4844194/ '
+      link:'https://linkedin.com/in/belziee'
     },
     {
       img:<CiMail/>,
@@ -37,8 +37,8 @@ const Footer = () => {
       data-aos="zoom-in" data-aos-duration="1000" 
       className="w-11/12 mt-3  mx-auto gap-10  flex flex-col lg:flex-row  justify-between">
         <div className="flex items-center gap-4">
-          <div className="font-bold text-xl">Litezy</div>
-          <span className='text-zinc-400'>© 2024 All Right Reserved.</span>
+          <div className="font-bold text-xl">Belziee</div>
+          <span className='text-zinc-400'>© 2025 All Right Reserved.</span>
         </div>
         <div  className="flex items-center gap-4">
           {apps.map((app,i) => (

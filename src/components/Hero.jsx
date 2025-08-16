@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import js from '../assets/js.png'
 import node from '../assets/node.png'
 import react from '../assets/react.png'
 import mysql from '../assets/mysql.png'
 import express from '../assets/express.png'
-import { AiOutlineMessage } from 'react-icons/ai'
+import solidity from '../assets/solidity.png'
 
 const Hero = ({ num, loading,repo }) => {
     const techs = [
 
         { name: 'Node.js', image: node },
         { name: 'Express', image: express },
+        { name: 'Solidity', image: solidity ,small:true},
         { name: 'React', image: react },
 
     ]
@@ -24,7 +25,7 @@ const Hero = ({ num, loading,repo }) => {
                     data-aos-duration="1000"
                     data-aos-easing="ease-in-sine"
                     className="px-2 py-1.5 bg-primary rounded-md text-sm font-medium text-white tracking-wide">
-                    Full Stack Software Developer
+                    Full Stack Software & Smart Contract Developer
                 </div>
 
                 <div data-aos="fade-right"
@@ -61,8 +62,8 @@ const Hero = ({ num, loading,repo }) => {
                     {techs.map((im, i) => {
                         const isEven = i % 2 === 0
                         return (
-                            <div className={`p-2 bg-black/40 rounded-full  `} key={i}>
-                                <img data-aos={`${isEven ? 'fade-left' : 'fade-right'}`} className={``} src={im.image} alt={im.name} />
+                            <div className={`p-2 bg-black/40 rounded-full ${im.small ? 'w-20' : ''}  `} key={i}>
+                                <img data-aos={`${isEven ? 'fade-left' : 'fade-right'} `} className={``} src={im.image} alt={im.name} />
                             </div>
                         )
                     })}

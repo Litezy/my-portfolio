@@ -70,7 +70,7 @@ const Navbar = () => {
                 <div data-aos="fade-right"
                     data-aos-duration="2000"
                     className=" flex w-1/2 items-center justify-between ">
-                    <div className="text-xl lg:text-3xl font-bold text-zinc-400 italic">Litezy</div>
+                    <div className="text-xl lg:text-3xl font-bold text-zinc-400 italic">Belziee</div>
                     <div className="lg:flex items-center gap-5 hidden">
                         {navs.map((item, i) => {
                             return (

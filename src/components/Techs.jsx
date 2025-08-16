@@ -8,7 +8,11 @@ const Techs = () => {
         },
         {
             name: 'Backend',
-            others: ['Node.js', 'Express.js', 'Sequelize', 'MySQL', 'RESTful APIs', 'JWT (JSON Web Tokens)']
+            others: ['Node.js', 'Express.js', 'Prisma', 'Sequelize', 'MySQL', 'Postgres', 'RESTful APIs', 'JWT (JSON Web Tokens)']
+        },
+        {
+            name: 'Smart Contracts',
+            others: ['Solidity', 'Hardhat', 'Web3.js', "ethers.js"]
         },
         {
             name: 'Git',
@@ -20,7 +24,7 @@ const Techs = () => {
         },
         {
             name: 'DevOps & Deployment',
-            others: ['CI/CD Pipelines', 'Netlify', 'Vercel', 'GitHub Actions']
+            others: ['CI/CD Pipelines', 'Netlify', 'Vercel', 'GitHub Actions', 'Docker']
         },
         {
             name: 'Other Tools',
@@ -28,7 +32,7 @@ const Techs = () => {
         },
         {
             name: 'Languages',
-            others: ['JavaScript', , 'HTML5', 'CSS3', 'SQL']
+            others: ['JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'SQL','Solidity']
         }
     ];
 
@@ -37,7 +41,6 @@ const Techs = () => {
             <div className="w-full text-center text-primary font-bold text-xl"> Technologies I Use</div>
             <div className="mt-5 w-10/12 mx-auto flex h-fit  rounded-md  p-2 flex-col items-start justify-start   gap-4">
                 {techs.map((tech, i) => {
-                    const isEven = i % 2 === 0
                     return (
                         <>
                             <div key={i}  className="flex flex-col items-center gap-2 mb-3 bg-alt w-full p-2 rounded-md">
@@ -47,7 +50,7 @@ const Techs = () => {
                                         const isEven = index % 2 === 0
                                         const lastnum = index === tech.others.length - 1
                                         return (
-                                            <div data-aos={`${isEven ? 'zoom-in-up':'zoom-in-down'}`}
+                                            <div data-aos={`zoom-in-up`}
                                             data-aos-duration="2000"
                                             key={index} className="">{item} {lastnum ? '' : ','}</div>
                                         )
